@@ -2,7 +2,7 @@
 Hadoop Data Processing Program
 
 ##Summary:
-	The program WordCount.java performs Map Reduce tasks for getting the count of the number of files that have a particular word. The result file shows the required count number against each word, regardless of the cases, special characters or numbers (just the letters).
+The program WordCount.java performs Map Reduce tasks for getting the count of the number of files that have a particular word. The result file shows the required count number against each word, regardless of the cases, special characters or numbers (just the letters).
 
 ##Design:
 
@@ -54,10 +54,10 @@ So, it has been considered that:
 So the output provided my the Mapper class instances' map() method will be:
 ```sh
       file1.txt			file2.txt		file3.txt
-			<nishit, 1>		<nishit, 1>		<prasad, 1>
-			<nishit, 0>		<nishit, 0>		<p, 1>
-			<prasad, 1>		<nishit, 0>		<prasad, 0>
-			<nishit, 0>		<nishit, 0>		<p, 0>
+		<nishit, 1>		<nishit, 1>		<prasad, 1>
+		<nishit, 0>		<nishit, 0>		<p, 1>
+		<prasad, 1>		<nishit, 0>		<prasad, 0>
+		<nishit, 0>		<nishit, 0>		<p, 0>
 ```
 The Combiner class aggregates the values of the same keys in the local files.
 Hence, the output from the Combiner class, by default will be:
