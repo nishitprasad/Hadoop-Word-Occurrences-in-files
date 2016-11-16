@@ -81,26 +81,26 @@ Hence, the output given by the reduce class is:
 The following are the respective implementations done in the WordCount.java file:
 
 In class Mapper:
-```sh
-		private static HashMap<String, Integer> fileMap = new HashMap<String, Integer>();
-		private static int count = 0; /*Dummy counter for value of a key
-		
-		In map() method:*/
-			String givenLine = value.toString();
-			String[] wordSet = givenLine.split("[^A-Za-z]+");
-			for(String token: wordSet) {
-				if(!token.isEmpty()) {
-					word.set(token.toLowerCase());
-					String keyStr = filename +"-"+ word.toString();
+```java
+	private static HashMap<String, Integer> fileMap = new HashMap<String, Integer>();
+	private static int count = 0; /*Dummy counter for value of a key
 
-					if(fileMap.containsKey(keyStr))
-				    		context.write(word, new IntWritable(0));
-					else {
-						fileMap.put(keyStr, ++count);
-				    		context.write(word, new IntWritable(1));
-					}
+	In map() method:*/
+		String givenLine = value.toString();
+		String[] wordSet = givenLine.split("[^A-Za-z]+");
+		for(String token: wordSet) {
+			if(!token.isEmpty()) {
+				word.set(token.toLowerCase());
+				String keyStr = filename +"-"+ word.toString();
+
+				if(fileMap.containsKey(keyStr))
+					context.write(word, new IntWritable(0));
+				else {
+					fileMap.put(keyStr, ++count);
+					context.write(word, new IntWritable(1));
 				}
 			}
+		}
 ```
 In class Reducer, nothing is changed. The same implementation as given in the typical WordCount java program.
 
