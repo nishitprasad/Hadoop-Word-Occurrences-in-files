@@ -105,7 +105,7 @@ In class Mapper:
 In class Reducer, nothing is changed. The same implementation as given in the typical WordCount java program.
 
 ##Build Command
-
+- Make a Runnable jar with this java file via Eclipse.
 - Make an input directory
 
     ```sh
