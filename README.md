@@ -48,12 +48,12 @@ So in this case, the hash-map will have the following contents:
 <"file3.txt-p, dummy_value>
 ```
 So, it has been considered that:
-```sh
-	if (hash-map has the key) then
-		map-output = <word, 0>
-	else (hash-map doesn't have the key) then
-		insert the key with dummy_value in hashmap
-		map-output = <word, 1>
+```
+if (hash-map has the key) then
+	map-output = <word, 0>
+else (hash-map doesn't have the key) then
+	insert the key with dummy_value in hashmap
+	map-output = <word, 1>
 ```
 So the output provided my the Mapper class instances' map() method will be:
 ```sh
