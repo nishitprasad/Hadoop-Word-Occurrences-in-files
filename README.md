@@ -1,10 +1,10 @@
 #Count the number of files a particular word has occurred in a Single Node Hadoop cluster
-
+```sh
 Hadoop Version: 2.6
 Operating System: Ubuntu 14.04
 Cluster Environment: Single-Node (localhost)
 Language: Java (JDK 7)
-
+```
 ##Summary:
 The program WordCount.java performs Map Reduce tasks for getting the count of the number of files that have a particular word. The result file shows the required count number against each word, regardless of the cases, special characters or numbers (just the letters).
 
