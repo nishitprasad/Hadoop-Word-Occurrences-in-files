@@ -107,18 +107,22 @@ In class Reducer, nothing is changed. The same implementation as given in the ty
 ##Build Command
 
 - Make an input directory
+
     ```sh
     hadoop dfs -mkdir -p /input_files
     ```
 - Copy all the text files from local machine to HDFS
+
     ```sh
         hadoop dfs -copyFromLocal <path of the file> /input_files
     ```
 - Run the WordCount.jar file stored in local machine with first argument as input folder path and second argument as output folder path:
+
     ```sh
         hadoop jar <local path of WordCount.jar> /input_files /desired_output
     ```
 - Print the necessary results in command prompt.
+
     ```sh	
         hdfs dfs -cat /desired_output/part-r-00000
     ```
